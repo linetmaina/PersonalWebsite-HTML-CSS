@@ -1,0 +1,171 @@
+/* =========================
+   ROOT COLORS (THEME)
+========================= */
+:root {
+    --maroon: #4a0e1a;
+    --dark-maroon: #2b0610;
+    --baby-pink: #f8c8dc;
+    --white: #ffffff;
+}
+
+/* =========================
+   GENERAL
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-maroon);
+    color: var(--white);
+}
+
+/* =========================
+   HEADER
+========================= */
+#hd {
+    height: 40vh;
+    background: url("images/profile.jpg") no-repeat center/cover;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(43, 6, 16, 0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TEXT */
+.name {
+    font-size: 2.5rem;
+    color: var(--baby-pink);
+}
+
+.title {
+    margin: 0.5em 0;
+}
+
+.github-link {
+    color: var(--baby-pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+    padding: 2em;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   ABOUT TEXT
+========================= */
+.about-text {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: var(--maroon);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    color: var(--baby-pink);
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
+
+/* =========================
+   PROJECT CARDS
+========================= */
+.project-card {
+    background-color: var(--maroon);
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.project-card img {
+    width: 100%;
+    height: 200px;           /* SAME HEIGHT for all */
+    object-fit: cover;       /* crops nicely */
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+/* =========================
+   FOOTER
+========================= */
+#footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--maroon);
+    margin-top: 2em;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #hd {
+        height: 30vh;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+    .section {
+        padding: 1em;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .project-card img {
+        height: 180px;
+    }
+}
