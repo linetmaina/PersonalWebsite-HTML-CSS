@@ -51,7 +51,7 @@ Screenshots of each project are included in the `images` folder.
 ---
 
 ## 🔗 Live Link
-
+https://linetmaina.github.io/PersonalWebsite-HTML-CSS/
 
 ---
 
